@@ -9,3 +9,13 @@ class Student(db.Model):
     class_no =db.Column(db.Integer, nullable=False)
     address=db.Column(db.String(50),nullable=False)
     id=db.Column(db.Integer, primary_key=True)
+
+#< ---- Easy way ---->
+    # def to_dict(self):
+    #     return {
+    #         "id":self.id,
+    #         "name":student.name,
+    #         "roll_no":self.roll_no,
+    #         "class_no":self.class_no,
+    #         "address":self.address
+    #     }
